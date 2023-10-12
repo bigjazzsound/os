@@ -79,3 +79,10 @@ modules:
   - type: script
     scripts:
       - signing.sh
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - BlexMono
+      google-fonts:
+        - Roboto
