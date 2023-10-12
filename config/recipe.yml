@@ -83,4 +83,4 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - IBMPlexMono
+        - BlexMono
