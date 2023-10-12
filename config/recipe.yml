@@ -79,3 +79,8 @@ modules:
   - type: script
     scripts:
       - signing.sh
+
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - IBMPlexMono
