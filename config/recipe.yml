@@ -84,3 +84,5 @@ modules:
     fonts:
       nerd-fonts:
         - BlexMono
+      google-fonts:
+        - Roboto
