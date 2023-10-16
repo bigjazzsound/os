@@ -1,0 +1,5 @@
+version: "1"
+rules:
+  - base: template
+    upstream: ublue-os/startingpoint
+    mergeMethod: hardreset
