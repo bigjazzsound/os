@@ -20,7 +20,6 @@ modules:
       - awscli2
       - bcc
       - cmake
-      - exa
       - fd-find
       - fish
       - fzf
