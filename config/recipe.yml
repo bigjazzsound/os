@@ -1,7 +1,7 @@
 name: os
 description: bigjazzsound's workstation OS
 base-image: ghcr.io/ublue-os/sericea-main
-image-version: 38
+image-version: 39
 
 modules:
   - type: files
