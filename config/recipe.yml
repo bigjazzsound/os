@@ -15,7 +15,8 @@ modules:
                   # config directory on ostree. Read more in the files module's README
 
   - type: rpm-ostree
-    repos: []
+    repos:
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - awscli2
       - bcc
@@ -45,6 +46,7 @@ modules:
       - ripgrep
       - rsync
       - sipcalc
+      - tailscale
       - virt-install
       - virt-manager
       - wireguard-tools
