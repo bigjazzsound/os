@@ -77,6 +77,7 @@ modules:
       - YubiOATH: com.yubico.yubioath
       - Lutris: net.lutris.Lutris
       - Flameshot: org.flameshot.Flameshot
+      - Cider: sh.cider.Cider
 
   - type: script
     scripts:
