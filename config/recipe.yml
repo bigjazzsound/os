@@ -28,6 +28,7 @@ modules:
       - gcc-c++
       - gdb
       - gh
+      - glibc-devel
       - golang
       - htop
       - jq
