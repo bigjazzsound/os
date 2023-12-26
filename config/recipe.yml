@@ -20,12 +20,11 @@ modules:
     install:
       - awscli2
       - bcc
+      - clang
       - cmake
       - fd-find
       - fish
       - fzf
-      - gcc
-      - gcc-c++
       - gdb
       - gh
       - glibc-devel
