@@ -22,6 +22,7 @@ modules:
       - bcc
       - clang
       - cmake
+      - eza
       - fd-find
       - fish
       - fzf
