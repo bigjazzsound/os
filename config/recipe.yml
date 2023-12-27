@@ -36,6 +36,7 @@ modules:
       - jq
       - kitty
       - libadwaita
+      - lld
       - libvirt
       - make
       - mpv
