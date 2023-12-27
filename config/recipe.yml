@@ -16,12 +16,14 @@ modules:
 
   - type: rpm-ostree
     repos:
+      - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - awscli2
       - bcc
       - clang
       - cmake
+      - docker-ce-cli
       - eza
       - fd-find
       - fish
