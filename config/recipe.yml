@@ -47,6 +47,7 @@ modules:
       - podman-remote
       - pwgen
       - python3-pip
+      - python3-devel
       - ripgrep
       - rsync
       - sipcalc
