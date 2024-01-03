@@ -39,6 +39,7 @@ modules:
       - lld
       - libvirt
       - make
+      - mkosi
       - mpv
       - nmap
       - npm
