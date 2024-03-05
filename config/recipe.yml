@@ -65,4 +65,21 @@ modules:
       - firefox
       - firefox-langpacks
 
+  - type: default-flatpaks
+    notify: true
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
+      install:
+        - com.bitwarden.desktop
+        - com.discordapp.Discord
+        - com.slack.Slack
+        - com.spotify.Client
+        - com.valvesoftware.Steam
+        - com.valvesoftware.SteamLink
+        - com.yubico.yubioath
+        - net.lutris.Lutris
+        - org.flameshot.Flameshot
+        - sh.cider.Cider
+
   - type: signing
