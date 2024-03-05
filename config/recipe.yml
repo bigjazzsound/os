@@ -1,47 +1,86 @@
-# image will be published to ghcr.io/<user>/<name>
-name: template
-# description will be included in the image's metadata
-description: This is my personal OS image.
+---
+name: os
+description: bigjazzsound's workstation OS
+base-image: ghcr.io/ublue-os/sericea-main
+image-version: 39
 
-# the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 39 # latest is also supported if you want new updates ASAP
-
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: files
     files:
-      - usr: /usr # copies config/files/usr into your image's /usr.
-                  # put configuration files you want in /etc/ on a booted system 
-                  # in /usr/etc/ in the image. read more in files module reference.
+      - usr: /usr
 
   - type: rpm-ostree
     repos:
-      # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://download.docker.com/linux/fedora/docker-ce.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
-      # - micro
-      # - starship
+      - awscli2
+      - bcc
+      - clang
+      - cmake
+      - composer-cli
+      - docker-ce-cli
+      - eza
+      - fd-find
+      - fish
+      - fzf
+      - gdb
+      - gh
+      - git-credential-libsecret
+      - glibc-devel
+      - golang
+      - htop
+      - jq
+      - kitty
+      - libadwaita
+      - libvirt
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - lld
+      - make
+      - mkosi
+      - mpv
+      - nmap
+      - nodejs-npm
+      - osbuild-composer
+      - pam-u2f
+      - pipx
+      - podman-remote
+      - pwgen
+      - python3-devel
+      - python3-pip
+      - qemu
+      - qemu-kvm
+      - ripgrep
+      - rsync
+      - sipcalc
+      - tailscale
+      - virt-install
+      - virt-manager
+      - virt-viewer
+      - wireguard-tools
+      - wlsunset
+      - yubikey-manager
     remove:
-      - firefox # default firefox removed in favor of flatpak
-      - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
+      - firefox
+      - firefox-langpacks
 
   - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
-      # repo-name: flathub
-      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+    notify: true
+    user:
+      repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      repo-name: flathub
       install:
-        - org.mozilla.firefox
-        # - org.gnome.Loupe
-        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
-      # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
-      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
-      # Installing different branches of the same Flatpak is not supported.
-      remove:
-      # - org.gnome.eog
+        - com.bitwarden.desktop
+        - com.discordapp.Discord
+        - com.slack.Slack
+        - com.spotify.Client
+        - com.valvesoftware.Steam
+        - com.valvesoftware.SteamLink
+        - com.yubico.yubioath
+        - net.lutris.Lutris
+        - org.flameshot.Flameshot
+        - sh.cider.Cider
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: signing
 
