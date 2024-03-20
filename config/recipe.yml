@@ -33,6 +33,7 @@ modules:
       - jq
       - kitty
       - libadwaita
+      - libgit2
       - libvirt
       - libvirt-daemon-config-network
       - libvirt-daemon-kvm
